@@ -133,9 +133,9 @@ public class XxlJobExecutor  {
     }
 
     // ---------------------- executor-server (rpc provider) ----------------------
-    private EmbedServer embedServer = null;
+    protected EmbedServer embedServer = null;
 
-    private void initEmbedServer(String address, String ip, int port, String appname, String accessToken) throws Exception {
+    protected void initEmbedServer(String address, String ip, int port, String appname, String accessToken) throws Exception {
 
         // fill ip port
         port = port>0?port: NetUtil.findAvailablePort(9999);
@@ -157,7 +157,7 @@ public class XxlJobExecutor  {
         embedServer.start(address, port, appname, accessToken);
     }
 
-    private void stopEmbedServer() {
+    protected void stopEmbedServer() {
         // stop provider factory
         if (embedServer != null) {
             try {

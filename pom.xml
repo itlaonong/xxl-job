@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.xuxueli</groupId>
 	<artifactId>xxl-job</artifactId>
-	<version>2.3.0</version>
+	<version>2.3.0_modified</version>
 	<packaging>pom</packaging>
 
 	<name>${project.artifactId}</name>
@@ -24,6 +24,8 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.test.skip>true</maven.test.skip>
 
+		<servlet-api.version>3.1.0</servlet-api.version>
+
 		<netty-all.version>4.1.58.Final</netty-all.version>
 		<gson.version>2.8.6</gson.version>
 
@@ -32,6 +34,7 @@
 
 		<mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
 		<mysql-connector-java.version>8.0.23</mysql-connector-java.version>
+		<mariadb.version>2.6.0</mariadb.version>
 
 		<slf4j-api.version>1.7.30</slf4j-api.version>
 		<junit.version>5.7.1</junit.version>
