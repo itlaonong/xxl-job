@@ -1,6 +1,7 @@
 package com.xxl.job.executor.core.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
+import com.xxl.job.core.executor.impl.XxlJobSpringMvcExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,7 +32,7 @@ public class XxlJobConfig {
     @Value("${xxl.job.executor.ip}")
     private String ip;
 
-    @Value("${xxl.job.executor.port}")
+    @Value("${server.port}")
     private int port;
 
     @Value("${xxl.job.executor.logpath}")
@@ -44,7 +45,7 @@ public class XxlJobConfig {
     @Bean
     public XxlJobSpringExecutor xxlJobExecutor() {
         logger.info(">>>>>>>>>>> xxl-job config init.");
-        XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
+        XxlJobSpringMvcExecutor xxlJobSpringExecutor = new XxlJobSpringMvcExecutor();
         xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
         xxlJobSpringExecutor.setAppname(appname);
         xxlJobSpringExecutor.setAddress(address);
